@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home | ElevaEmpilhadeiras</title>
+     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/animations.css" />
+
+    <script src="https://kit.fontawesome.com/a1c18692b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class= "animate-down top-content">
+            <nav class= "top-nav">
+                <div class="left-content">
+                    <img src="/images/logo-eleva.png" alt="logo-eleva">
+                    <span>| Since 2007</span>
+                </div>
+                <div class="right-content">
+                    <span>{{date}}</span>
+                </div>
+            </nav>
+        </div>
+        <div class="bottom-content">
+            <div class="first-column">
+                <h4>Nesta tela você poderá administrar as ordens de serviço, produtos e peças em estoque, cadastrar novos funcionários e tirar relatórios.</h4>
+                <div class="options">
+                    <a href="/customerVerify"><i class="fas fa-file-import"></i><span>Ordem de Serviço</span></a>
+                    <a href="/view/viewOrders"><i class="fas fa-edit"></i><span>Atualizar OS</span></a>
+                    <a href="/equipmentRegister"><i class="fas fa-tools"></i><span>Equipamentos</span></a>
+                    <a href="/customerRegister"><i class="fas fa-user-plus"></i><span> Cliente</span></a>
+                    <a href="/userRegister"><i class="fas fa-user-plus"></i><span>Funcionários</span></a>
+                    <a href="#"><i class="fas fa-list-alt"></i><span>Relatórios</span></a>
+                </div>
+            </div>
+            <div class="second-column">
+                <div class="profile">
+                    <div class="parent-profile">
+                        <img class="profile-background" src="/images/avatar.svg" alt="user-background">
+                        <img class="profile-avatar" src="/images/workers.svg" alt="user">
+                    </div>
+
+                    <p>Olá, <b>{{user.name}}!</b></p>
+                    <span>{{user.role}}</span>
+                </div>
+                <div class= "exit">
+                    <a href="/auth/logout">Sair</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>  
+</html>

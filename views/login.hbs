@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Login | ElevaEmpilhadeiras</title>
+     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/login.css">
+    <script src="https://kit.fontawesome.com/a1c18692b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+
+            <div class="first-column">
+                <h2>Realize o login</h2>
+                <p class="text-mid">Este sistema é restrito para o uso dos colaboradores da Eleva Empilhadeiras.
+                </p>
+                <form action="/auth/login" method="POST">        
+                    <div class="input-block">
+                        <label for="email"></label>
+                        <input type="text" name="email" placeholder="E-mail" id="email" ></input>
+                    </div>
+                    <div class="input-block">
+                        <label for="password"></label>
+                        <input type="password" name= "password" placeholder="Senha" id="password"></input>
+                    </div>
+                    <div class="input-block">
+                    <button type="submit" class="acessar">
+                       Acessar
+                    </button>
+                    {{#if alertmessage}}
+                    <h4 class="alert-message">{{alertmessage}}</h4>
+                    {{/if}}
+                    </div>
+                    <p class="copyright">&copy; Eleva 2020</p>
+                </form>
+            </div>
+            
+            <div class="second-column">
+                <img src="/images/eleva-right.png" alt="fundo-eleva">
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
